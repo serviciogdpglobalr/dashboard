@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-GDP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles.css" class="style-sheet">
+</head>
+<body>
+    <header>
+        <figure>
+            <img class="global-logo" src="./assets/logo-globalr-white.png" alt="global-logo">
+        </figure>
+        <div>
+            <h2>Gestión de Problemas </h2>
+        </div>
+        <div>
+            <button class="solicitudes-btn" onclick="abrirSolicitudes()">Solicitudes</button>
+            <button class="casos-btn" onclick="abrirCasos()">Casos</button>
+        </div>
+        <span class="material-symbols-outlined dark">
+            dark_mode
+            </span>
+        <span class="material-symbols-outlined ligth">
+            light_mode
+             </span>
+    </header>
+    <main>
+        <h1>Informe de Resultados Junio 2023</h1>
+        <section class="solicitudes-1">
+            <div class="solicitudes-1-container">
+                <div class="solicitudes-mes-container">
+                    <h3>Solicitudes del Mes</h3>
+                    <div class="data-solicitudes data-mes"></div>
+                </div>
+                <div class="solicitudes-procesadas-container">
+                    <h3>Solicitudes  Procesadas</h3>
+                    <div class="data-solicitudes data-procesadas"></div>
+                </div>
+            </div>
+            <div class="reportes-enviados-container">
+                <h3>Reportes Enviados</h3>
+                <div>
+                    <div class="reportes-por-enviar">
+                        <span class="reportes-enviados-data"></span>
+                        <div class="reportes-enviados"></div>
+                    </div>
+                    <span class="reportes-por-enviar-data"></span>
+                </div>
+            </div>
+            <div class="solicitudes-2-container">
+                <div class="solicitudes-johana-container">
+                    <h3>Solicitudes Johana</h3>
+                    <div class="data-solicitudes data-johana"></div>
+                </div>
+                <div class="solicitudes-angel-container">
+                    <h3>Solicitudes Angel</h3>
+                    <div class="data-solicitudes data-angel"></div>
+                </div>
+            </div>
+        </section>
+        <section class="solicitudes-2">
+            <div class="solicitudes-procesadas-mes-container">
+                <h3>Solicitudes Procesadas por Mes</h3>
+                <div class="solicitudes-procesadas-mes">
+                    <ul>
+                        <li class>100</li>
+                        <li>90</li>
+                        <li>80</li>
+                        <li>70</li>
+                        <li>60</li>
+                        <li>50</li>
+                        <li>40</li>
+                        <li>30</li>
+                        <li>20</li>
+                        <li>10</li>
+                        <li>0</li>
+                    </ul>
+                    <div>
+                        <div class="mes mes1"></div>
+                        <div class="mes mes2"></div>
+                        <div class="mes mes3"></div>
+                    </div>
+                </div>
+                <ul class="meses">
+                    <li>Abr</li>
+                    <li>May</li>
+                    <li>Jun</li>
+                </ul>
+                <ul class="solicitudes-mes-leyenda">
+                    <li>Abril: <span class="mes1-data"></span></li>
+                    <li>Mayo: <span class="mes2-data"></span></li>
+                    <li>Junio: <span class="mes3-data"></span></li>
+                </ul>
+            </div>
+            <div class="efectividad-correos-container">
+                <h3>Efectividad en la respuesta de correos</h3>
+                <!--<div class="circle-graph-container-mails">
+                    <svg>
+                        <circle r="100" cx="50%" cy="50%" pathlength="100"></circle>
+                        <circle r="100" cx="50%" cy="50%" pathlength="100"></circle>
+                    </svg>
+                    <span class="efectividad-correos-data"></span>
+               </div>-->
+               <div class="semaforo-container">
+                <div class="semaforo">
+                    <div class="semaforo-linea"></div>
+                    <div class="semaforo-circulo porcentaje-correos"></div>
+                </div>
+                <ul>
+                    <li>0</li>
+                    <li>10</li>
+                    <li>20</li>
+                    <li>30</li>
+                    <li>40</li>
+                    <li>50</li>
+                    <li>60</li>
+                    <li>70</li>
+                    <li>80</li>
+                    <li>90</li>
+                    <li>100</li>
+                </ul>
+               </div>
+            </div>
+            <div class="efectividad-reportes-container">
+                <h3>Efectividad en la entrega de reportes</h3>
+                    <!--<div class="circle-graph-container">
+                        <svg>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"></circle>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"></circle>
+                        </svg>
+                        <span class="efectividad-reportes-data"></span>
+                   </div>-->
+                   <div class="semaforo-container">
+                    <div class="semaforo">
+                        <div class="semaforo-linea"></div>
+                        <div class="semaforo-circulo porcentaje-reportes"></div>
+                    </div>
+                    <ul>
+                        <li>0</li>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>30</li>
+                        <li>40</li>
+                        <li>50</li>
+                        <li>60</li>
+                        <li>70</li>
+                        <li>80</li>
+                        <li>90</li>
+                        <li>100</li>
+                    </ul>
+                   </div>
+            </div>
+        </section>
+        <section class="solicitudes-3">
+            <div class="solicitudes-tipo-container">
+                <h3>Actividades procesadas por tipo</h3>
+                <div class="solicitudes-tipo">
+                    <ul>
+                        <li>Dar Estatus
+                            <div>
+                                <div class="tipo estatus"></div>
+                                <span class="estatus-data"></span>
+                            </div>
+                        </li>
+                        <li>Creación
+                            <div>
+                                <div class="tipo creacion"></div>
+                                <span class="creacion-data"></span>
+                            </div>
+                        </li>
+                        <li>Marcar caso TOP
+                            <div>
+                                <div class="tipo top"></div>
+                                <span class="top-data"></span>
+                            </div>
+                        </li>
+                        <li>Relacionar Incidencia
+                            <div>
+                                <div class="tipo incidencia"></div>
+                                <span class="incidencia-data"></span>
+                            </div>
+                        </li>
+                        <li>Cierre
+                            <div>
+                                <div class="tipo cierre"></div>
+                                <span class="cierre-data"></span>
+                            </div>
+                        </li>
+                        <li>Asociar CRQ
+                            <div>
+                                <div class="tipo crq"></div>
+                                <span class="crq-data"></span>
+                            </div>
+                        </li>
+                        <li>Asignación de bandeja
+                            <div>
+                                <div class="tipo bandeja"></div>
+                                <span class="bandeja-data"></span>
+                            </div>
+                        </li>
+                        <li>Asociar Proyecto
+                            <div>
+                                <div class="tipo proyecto"></div>
+                                <span class="proyecto-data"></span>
+                            </div>
+                        </li>
+                        <li>Documentación
+                            <div>
+                                <div class="tipo documentacion"></div>
+                                <span class="documentacion-data"></span>
+                            </div>
+                        </li>
+                        <li>Escalamiento
+                            <div>
+                                <div class="tipo escalamiento"></div> 
+                                <span class="escalamiento-data"></span>           
+                            </div>
+                        </li>
+                        <li>Certificación
+                            <div>
+                                <div class="tipo certificacion"></div> 
+                                <span class="certificacion-data"></span>           
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reportes-tipo-container">
+                <h3>Entregas por tipo de reporte</h3>
+                <div class="reportes-tipo">
+                    <ul>
+                        <li>Desarrollo por Área
+                            <div>
+                                <div class="tipo desarrollo"></div>
+                                <span class="desarrollo-data"></span>
+                            </div>
+                        </li>
+                        <li>Estatus por Área
+                            <div>
+                                <div class="tipo estatus-area"></div>
+                                <span class="estatus-area-data"></span>
+                            </div>
+                        </li>
+                        <li>GDP
+                            <div>
+                                <div class="tipo gdp"></div>
+                                <span class="gdp-data"></span>
+                            </div>
+                        </li>
+                        <li>Clasificación
+                            <div>
+                                <div class="tipo clasificacion"></div>
+                                <span class="clasificacion-data"></span>
+                            </div>
+                        </li>
+                        <li>Tablas de gestión
+                            <div>
+                                <div class="tipo tablas"></div>
+                                <span class="tablas-data"></span>
+                            </div>
+                        </li>
+                        <li>Cartera de Casos
+                            <div>
+                                <div class="tipo cartera"></div>
+                                <span class="cartera-data"></span>
+                            </div>
+                        </li>
+                        <li>Boletín
+                            <div>
+                                <div class="tipo boletin"></div>
+                                <span class="boletin-data"></span>
+                            </div>
+                        </li>
+                        <!--
+                        <li>Desarrollo por Gerencia
+                            <div>
+                                <div class="tipo desa-gerencia"></div>
+                                <span class="desa-gerencia-data"></span>
+                            </div>
+                        </li>-->
+                    </ul>
+            </div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+    <script src="./darkLigthMode.js"></script>
+</body>
+</html>

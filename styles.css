@@ -1,0 +1,925 @@
+/* Estilos Generales */
+:root {
+    --background-body: #AEE9F5;
+    --background-header: #277CEA;
+    --color-title:#393939;
+    --white-background:#ECF8F9; 
+    --card-shadow:4px 4px 32px 0px rgba(0, 0, 0, 0.25);
+    --solicitudes-background: #E55807;
+    --bar-background: linear-gradient(180deg, #E55807 0%, #7E1717 100%);
+    --diagnostico-background: #7E1717;
+    --hoover-button-color: #EB503F;
+    --neutral-background: #C31608;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    background: var(--background-body);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+/*Header*/
+
+header {
+    width: 100%;
+    height: 75px;
+    background: var(--background-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+header figure {
+    width: 162px;
+    height: 58px;
+}
+
+header figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+header button {
+    width: 123px;
+    height: 35px;
+    background: none;
+    border: 3px solid white;
+    color: white;
+    margin-right: 35px;
+    border-radius: 16px;
+}
+
+header button:hover {
+    border: 3px solid var(--hoover-button-color);
+    color: var(--hoover-button-color);
+    cursor: pointer;
+}
+
+header h2 {
+    font-size: 32rem;
+    text-align: center;
+    color: white;
+}
+
+/*Main*/
+
+main {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+main h3 {
+   font-size: 16rem; 
+}
+
+h1 {
+    font-size: 40rem;
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--color-title);
+}
+
+.solicitudes-1, .solicitudes-2, .solicitudes-3 {
+    width: 100%;
+}
+
+/*Solicitudes 1*/
+.solicitudes-1 {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+
+.solicitudes-1-container,.solicitudes-2-container, .reportes-enviados-container {
+    width: 35%;
+    display: flex;
+}
+
+.solicitudes-1-container {
+    background: var(--white-background);
+    border-radius: 16px;
+    max-width: 514px;
+    height: 170px;
+    box-shadow: var(--card-shadow);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reportes-enviados-container {
+    background: var(--white-background);
+    border-radius: 16px;
+    max-width: 350px;
+    height: 170px;
+    box-shadow: var(--card-shadow);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.solicitudes-2-container {
+    background: var(--white-background);
+    border-radius: 16px;
+    max-width: 514px;
+    height: 170px;
+    box-shadow: var(--card-shadow);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.data-solicitudes {
+    width: 152px;
+    height: 58px;
+    background: var(--solicitudes-background);
+    border-radius: 16px;
+    font-size: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.solicitudes-1 h3 {
+    margin-bottom: 28px;
+}
+
+.reportes-enviados-container > div { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reportes-enviados-container span { 
+    font-size: 32rem;
+    font-weight: bold;
+}
+
+.reportes-por-enviar {
+    width: 284px;
+    height: 58px;
+    background: none;
+    border: 1px solid var(--solicitudes-background);
+    font-size: 32rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.reportes-por-enviar span {
+    position: absolute;
+    right: calc(50% - 37px);
+    top: calc(50% - 19px);
+}
+
+.reportes-enviados {
+    width: 0;
+    height: 100%;
+    border: none;
+    background: var(--solicitudes-background);
+}
+
+/*Solicitudes 2 */
+
+.solicitudes-2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.solicitudes-2 li {
+    font-size: 16rem;
+}
+
+.solicitudes-procesadas-mes-container,.efectividad-correos-container, .efectividad-reportes-container {  
+    width: 30%;
+}
+
+.solicitudes-procesadas-mes-container {
+    position: relative;
+    height: 320px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    max-width: 370px;
+}
+
+.solicitudes-procesadas-mes-container h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.solicitudes-procesadas-mes {
+    width: 40%;
+    height: 240px;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.solicitudes-procesadas-mes ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.solicitudes-procesadas-mes-container ul li {
+    list-style: none;
+    font-size: 12rem;
+}
+
+.solicitudes-procesadas-mes div {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.mes {
+    width: 23px;
+    background: var(--bar-background);
+}
+
+.meses {
+    display: flex;
+    gap: 23px;
+    margin-left: 50px;
+}
+
+.solicitudes-mes-leyenda {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+/*Código del primer gráfico de círculo*/
+
+.efectividad-correos-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.efectividad-correos-container h3 { 
+    text-align: center;
+}
+
+.semaforo-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.semaforo {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, #E8130C 0%, #FF380D 13.54%, #FF0060 25%, #FDE065 36.98%, #E3D75B 47.40%, #F6FA70 60.42%, #0CF575 71.88%, #00DFA2 85.94%, #0CEB31 100%);
+    border: 5px solid #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.semaforo-linea {
+    width: 100%;
+    border: 3px solid #000;
+}
+
+.semaforo-circulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #2B2727;
+    position: absolute;
+    font-size: 10rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.efectividad-correos-container span { 
+    font-size: 20rem;
+    font-weight: bold;
+    position: absolute;
+    top: calc(50% - 90px);
+    left: calc(20% - 23px);
+}
+
+.efectividad-correos-container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.efectividad-correos-container ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 12rem;
+}
+
+.efectividad-reportes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.efectividad-reportes-container h3 {
+    text-align: center;
+}
+
+.efectividad-reportes-container span { 
+    font-size: 20rem;
+    font-weight: bold;
+    position: absolute;
+    top: calc(50% - 90px);
+    left: calc(20% - 23px);
+}
+
+.efectividad-reportes-container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.efectividad-reportes-container ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 12rem;
+}
+
+
+/*.efectividad-correos-container svg { 
+    width: 224px;
+    height: 224px;
+}
+
+.efectividad-correos-container svg circle { 
+    fill: none;
+    stroke:gray;
+    stroke-width: 20;
+    stroke-dasharray: 100 100;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+}
+
+.efectividad-correos-container svg circle:nth-child(2) {
+    stroke:var(--solicitudes-background);
+    stroke-dasharray: var(--porcentaje) 100;
+}
+
+.circle-graph-container-mails { 
+    position: relative;
+}
+ /*
+
+.efectividad-reportes {
+    width: 100%;
+    display: flex;
+}
+
+.efectividad-reportes-container svg {
+    width: 224px;
+    height: 224px;
+}
+
+.efectividad-reportes-container svg circle {
+    fill: none;
+    stroke:gray;
+    stroke-width: 20;
+    stroke-dasharray: 100 100;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+}
+
+.efectividad-reportes-container svg circle:nth-child(2) {
+    stroke: var(--solicitudes-background);
+    stroke-dasharray: var(--porcentaje) 100;
+}
+
+.circle-graph-container {
+    position: relative;
+}
+
+.efectividad-reportes-container span {
+    font-size: 32rem;
+    font-weight: bold;
+    position: absolute;
+    top: calc(50% - 19px);
+    right: calc(50% - 60px);
+}
+
+/*Solicitudes3*/
+
+.solicitudes-3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.solicitudes-tipo-container, .reportes-tipo-container {
+    width: 40%;
+} 
+
+.solicitudes-tipo-container {
+    height: 480px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.solicitudes-tipo-container h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reportes-tipo-container {
+    height: 480px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.solicitudes-tipo, .reportes-tipo {
+    width: 100%;
+}
+
+.solicitudes-tipo ul {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.solicitudes-tipo ul li {
+    font-size: 12rem;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 0.5fr 2fr;
+    font-weight: bold;
+}
+
+.solicitudes-tipo ul li > div {
+    width: 50%;
+    display: flex;
+    column-gap: 5px;
+    justify-self: start;
+}
+
+.solicitudes-tipo ul li span {
+    display: block;
+}
+
+.tipo {
+    width: 50%;
+    height: 15px;
+    background: var(--bar-background);
+}
+
+.reportes-tipo-container h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reportes-tipo ul {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.reportes-tipo ul li {
+    font-size: 12rem;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 0.5fr 2fr;
+    font-weight: bold;
+}
+
+.reportes-tipo ul li > div {
+    width: 50%;
+    display: flex;
+    column-gap: 5px;
+    justify-self: start;
+}
+
+.reportes-tipo ul li span {
+    display: block;
+}
+
+/*Pestaña de Casos Problema*/
+
+.problemas1, .problemas2, .problemas3 {
+    width: 100%;
+}
+
+.problemas-curso, .casos-escalados {
+    width: 45%;
+}
+
+.problemas1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.problemas-curso {
+    height: 152px;
+    max-width: 648px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.problemas-curso h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.casos-escalados {
+    height: 152px;
+    max-width: 648px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.problemas-curso ul {
+    position: absolute;
+    right: 20%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.diagnostico-cuadro {
+    width: 17px;
+    height: 17px;
+    background: var(--diagnostico-background);
+}
+
+.desarrollo-cuadro {
+    width: 17px;
+    height: 17px;
+    background: var(--solicitudes-background);
+}
+
+.problemas-curso ul p {
+    font-size: 14rem;
+    font-weight: bold;
+}
+
+.problemas-curso ul li {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.problemas-curso p, .problemas-curso span {
+    font-size: 16rem;
+}
+
+.problemas-curso-info {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.problemas-curso-info > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.problemas-curso-data-container {
+    width: 284px;
+    height: 50px;
+    display: flex;
+}
+
+.problemas-curso-data-container div:nth-child(1) {
+    width: 50%;
+    height: 100%;
+    background: var(--diagnostico-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16rem;
+    font-weight: bold;
+    color: white;
+}
+
+.problemas-curso-data-container div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    background: var(--solicitudes-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20rem;
+    font-weight: bold;
+    color: white;
+}
+
+.problemas-curso-info p {
+    display: flex;
+    column-gap: 5px;
+    font-weight: bold;
+}
+
+.casos-escalados ul {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.terceros-cuadro {
+    width: 17px;
+    height: 17px;
+    background: var(--diagnostico-background);
+}
+
+.gestion-cuadro {
+    width: 17px;
+    height: 17px;
+    background: var(--solicitudes-background);
+}
+
+.casos-escalados ul p {
+    font-size: 14rem;
+    font-weight: bold;
+}
+
+.casos-escalados ul li {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.casos-escalados p, .casos-escalados span {
+    font-size: 16rem;
+}
+
+.escalados-info {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.escalados-info > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.escalados-info-container {
+    width: 284px;
+    height: 50px;
+    display: flex;
+}
+
+.escalados-info-container div:nth-child(1) {
+    height: 100%;
+    background: var(--diagnostico-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16rem;
+    font-weight: bold;
+    color: white;
+}
+
+.escalados-info-container div:nth-child(2) {
+    height: 100%;
+    background: var(--solicitudes-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20rem;
+    font-weight: bold;
+    color: white;
+}
+
+.escalados-info p {
+    display: flex;
+    column-gap: 5px;
+    font-weight: bold;
+}
+
+.casos-escalados h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.problemas2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.promedios {
+    width: 60%;
+    max-width: 839px;
+    height: 150px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.promedios > div {
+    width: 30%;
+}
+
+.nuevos-cerrados {
+    width: 30%;
+    max-width: 499px;
+    height: 150px;
+    background: var(--white-background);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nuevos-cerrados div h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.problemas2 h3 {
+    font-size: 14rem;
+    width: 70%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+ .promedio-cuadro, .nuevos-cerrados-cuadro {
+    width: 170px;
+    height: 58px;
+    border-radius: 16px;
+    background: var(--neutral-background);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rem;
+    font-weight: bold;
+ }
+
+ .problemas3 {
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ .pke-gerencia-container {
+    width: 40%;
+    max-width: 693px;
+    height: 600px;
+    background: var(--white-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 16px;
+ }
+
+ .casos-container {
+    width: 40%;
+ }
+
+ .casos-asignados-container {
+    width: 100%;
+    height: 246px;
+    background: var(--white-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 16px;
+    margin-bottom: 20px;
+ }
+
+ .casos-importantes-container {
+    width: 100%;
+    height: 330px;
+    background: var(--white-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 16px;
+ }
+
+ .pke-gerencia-container h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.casos-asignados-container h3, .casos-importantes-container h3 {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pke-gerencia, .casos-asignados, .casos-importantes {
+    width: 100%;
+}
+
+.pke-gerencia ul, .casos-asignados ul, .casos-importantes ul {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.pke-gerencia ul li, .casos-asignados ul li, .casos-importantes ul li {
+    font-size: 10rem;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 0.5fr 2fr;
+    font-weight: bold;
+}
+
+.pke-gerencia ul li > div, .casos-asignados ul li > div, .casos-importantes ul li > div {
+    width: 50%;
+    display: flex;
+    column-gap: 5px;
+    justify-self: start;
+}
+
+.pke-gerencia ul li span, .casos-asignados ul li span, .casos-importantes ul li span {
+    display: block;
+}
+
+.gerencia, .casos {
+    height: 15px;
+    background: var(--bar-background);
+}
+
+/* Dark Mode / Light Mode */
+
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+}
+
+.ligth {
+    display: none;
+}
+
+

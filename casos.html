@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-GDP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles.css" class="style-sheet">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="./assets/logo-globalr-white.png" alt="global-logo">
+        </figure>
+        <div>
+            <h2>Gestión de Problemas </h2>
+        </div>
+        <div>
+            <button onclick="abrirSolicitudes()">Solicitudes</button>
+            <button onclick="abrirCasos()">Casos</button>
+        </div>
+        <span class="material-symbols-outlined dark">
+            dark_mode
+            </span>
+        <span class="material-symbols-outlined ligth">
+            light_mode
+            </span>
+    </header>
+    <main>
+        <h1>CASOS PROBLEMA JUNIO 2023</h1>
+        <secttion class="problemas1">
+            <div class="problemas-curso">
+                <ul>
+                    <li>
+                        <div class="diagnostico-cuadro"></div>
+                        <p>Diagnóstico</p>
+                    </li>
+                    <li>
+                        <div class="desarrollo-cuadro"></div>
+                        <p>Desarrollo</p>
+                    </li>
+                </ul>
+                <div class="problemas-curso-info">
+                    <h3>Casos Problemas en Curso</h3>
+                    <div>
+                        <div class="problemas-curso-data-container">
+                            <div class="diagnostico"></div>
+                            <div class="desarrollo"></div>
+                        </div>
+                        <p>Total:<span class="total-casos"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="casos-escalados">
+                <ul>
+                    <li>
+                        <div class="terceros-cuadro"></div>
+                        <p>Diagnóstico por terceros</p>
+                    </li>
+                    <li>
+                        <div class="gestion-cuadro"></div>
+                        <p>Gestionados en diagnóstico</p>
+                    </li>
+                </ul>
+                <div class="escalados-info">
+                    <h3>Casos Escalados</h3>
+                    <div>
+                        <div class="escalados-info-container">
+                            <div class="terceros"></div>
+                            <div class="gestion"></div>
+                        </div>
+                        <p>Total:<span class="total-escalados"></span></p>
+                    </div>
+                </div>
+            </div>
+        </secttion>
+        <secttion class="problemas2">
+            <div class="promedios">
+                <div>
+                    <h3>Promedio de días 
+                        de un caso en diagnóstico</h3>
+                    <div class="promedio-cuadro dias-diagnostico"></div>
+                </div>
+                <div>
+                    <h3>Promedio de días 
+                        de un caso en desarrollo</h3>
+                    <div class="promedio-cuadro dias-desarrollo"></div>
+                </div>
+                <div>
+                    <h3>Promedio de días 
+                        de un caso en cerrarse</h3>
+                    <div class="promedio-cuadro dias-cierre"></div>
+                </div>
+            </div>
+            <div class="nuevos-cerrados">
+                <div>
+                    <h3>Casos Nuevos</h3>
+                    <div class="nuevos-cerrados-cuadro nuevos"></div>
+                </div>
+                <div>
+                    <h3>Casos Cerrados</h3>
+                    <div class="nuevos-cerrados-cuadro cerrados"></div>
+                </div>
+            </div>
+        </secttion>
+        <secttion class="problemas3">
+            <div class="pke-gerencia-container">
+                <h3>PKE Pendientes por Gerencia</h3>
+                <div class="pke-gerencia">
+                    <ul>
+                        <li>Gerencia Gestión Soporte al Cliente y Sistemas
+                            <div>
+                                <div class="gerencia soporte-cliente"></div>
+                                <span class="soporte-cliente-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia de Integración de Servicios
+                            <div>
+                                <div class="gerencia integracion-servicios"></div>
+                                <span class="integracion-servicios-data"></span>
+                            </div>
+                        </li>
+                        <li>Sistemas de Interacción con el Cliente
+                            <div>
+                                <div class="gerencia interaccion-cliente"></div>
+                                <span class="interaccion-cliente-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia de Configuración de Planes y Promociones
+                            <div>
+                                <div class="gerencia planes-promociones"></div>
+                                <span class="planes-promociones-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia Plataformas TI y Datos
+                            <div>
+                                <div class="gerencia plataformas-datos"></div>
+                                <span class="plataformas-datos-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia de Sistemas de Soporte a la Operación
+                            <div>
+                                <div class="gerencia soporte-operacion"></div>
+                                <span class="soporte-operacion-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia Gestión Soporte al Negocio
+                            <div>
+                                <div class="gerencia soporte-negocio"></div>
+                                <span class="soporte-negocio-data"></span>
+                            </div>
+                        </li>
+                        <li>Gerencia Gestion de Plataformas e Infraestructura
+                            <div>
+                                <div class="gerencia plataformas-infraestructura"></div>
+                                <span class="plataformas-infraestructura-data"></span>
+                            </div>
+                        </li>
+                        <li>Centro de Cont.de Operac
+                            <div>
+                                <div class="gerencia control-operaciones"></div>
+                                <span class="control-operaciones-data"></span>
+                            </div>
+                        </li>
+                        <li>SEGURIDAD
+                            <div>
+                                <div class="gerencia seguridad"></div>
+                                <span class="seguridad-data"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="casos-container">
+                <div class="casos-asignados-container">
+                    <h3>Casos Problemas Asignados</h3>
+                    <div class="casos-asignados">
+                        <ul>
+                            <li>GlobalR
+                                <div>
+                                    <div class="casos global"></div>
+                                    <span class="global-data"></span>
+                                </div>
+                            </li>
+                            <li>Telefónica
+                                <div>
+                                    <div class="casos telefonica"></div>
+                                    <span class="telefonica-data"></span>
+                                </div>
+                            </li>
+                            <li>Sin Asignar
+                                <div>
+                                    <div class="casos sin-asignar"></div>
+                                    <span class="sin-asignar-data"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="casos-importantes-container">
+                    <h3>Casos a Considerar</h3>
+                    <div class="casos-importantes">
+                        <ul>
+                            <li>Casos SIP+
+                                <div>
+                                    <div class="casos sip"></div>
+                                    <span class="sip-data"></span>
+                                </div>
+                            </li>
+                            <li>Casos MM
+                                <div>
+                                    <div class="casos mm"></div>
+                                    <span class="mm-data"></span>
+                                </div>
+                            </li>
+                            <li>Casos Proyecto
+                                <div>
+                                    <div class="casos proyecto"></div>
+                                    <span class="proyecto-data"></span>
+                                </div>
+                            </li>
+                            <li>Casos WA
+                                <div>
+                                    <div class="casos wa"></div>
+                                    <span class="wa-data"></span>
+                                </div>
+                            </li>
+                            <li>Casos TOP
+                                <div>
+                                    <div class="casos top"></div>
+                                    <span class="top-data"></span>
+                                </div>
+                            </li>
+                            <!--<li>Casos Devueltos
+                                a Diagnóstico
+                                <div>
+                                    <div class="casos devueltos"></div>
+                                    <span class="devueltos-data"></span>
+                                </div>
+                            </li>
+                            <li>Casos Reabiertos
+                                <div>
+                                    <div class="casos reabiertos"></div>
+                                    <span class="reabiertos-data"></span>
+                                </div>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </secttion>
+    </main>
+    <script src="./casos.js"></script>
+    <script src="./darkLigthMode.js"></script>
+</body>
+</html>
