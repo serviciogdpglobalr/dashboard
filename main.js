@@ -6,8 +6,8 @@ let solicitudesAngel = 27;
 let solicitudesAbril = 55;
 let solicitudesMayo = 84;
 let solicitudesJunio = 47;
-let reportesPorEnviar = 44;
-let reportesEnviados = 44;
+let reportesPorEnviar = 43;
+let reportesEnviados = 43;
 let reportesErrores = 0;
 let estatus = 6;
 let creacion = 4;
@@ -27,6 +27,8 @@ let gdp = 5;
 let clasificacion = 5;
 let tablas = 5;
 let cartera = 5;
+let prioridadesArea = 1;
+let validacionesInc = 2;
 let boletin = 17;
 //let desarrolloGerencia = 2;
 
@@ -76,6 +78,8 @@ let gdpBar = document.querySelector('.gdp');
 let clasificacionBar = document.querySelector('.clasificacion');
 let tablasBar = document.querySelector('.tablas');
 let carteraBar = document.querySelector('.cartera');
+let prioridadesAreaBar = document.querySelector('.prioridades');
+let validacionesIncBar = document.querySelector('.validaciones-inc');
 let boletinBar = document.querySelector('.boletin');
 let desarrolloGerenciaBar = document.querySelector('.desa-gerencia');
 let desarrolloAreaData = document.querySelector('.desarrollo-data');
@@ -84,6 +88,8 @@ let gdpData = document.querySelector('.gdp-data');
 let clasificacionData = document.querySelector('.clasificacion-data');
 let tablasData = document.querySelector('.tablas-data');
 let carteraData = document.querySelector('.cartera-data');
+let prioridadesAreaData = document.querySelector('.prioridades-data');
+let validacionesIncData = document.querySelector('.validaciones-inc-data');
 let boletinData = document.querySelector('.boletin-data');
 //let desarrolloGerenciaData = document.querySelector('.desa-gerencia-data');
 
@@ -158,14 +164,18 @@ const calculoSolicitudesTipo = () => {
 }
 
 const calculoReportesTipo = () => {
-    let total = desarrolloArea + estatusArea + gdp + clasificacion + tablas + cartera + boletin;
+    let total = desarrolloArea + estatusArea + gdp + clasificacion + tablas + cartera + prioridadesArea + validacionesInc + boletin;
     desarrolloAreaBar.style.width = `${(desarrolloArea * 100) / total}%`;
     estatusAreaBar.style.width = `${(estatusArea * 100) / total}%`;
     gdpBar.style.width = `${(gdp * 100) / total}%`;
     clasificacionBar.style.width = `${(clasificacion * 100) / total}%`;
     tablasBar.style.width = `${(tablas * 100) / total}%`;
     carteraBar.style.width = `${(cartera * 100) / total}%`;
+    prioridadesAreaBar.style.width = `${(prioridadesArea * 100) / total}%`;
     boletinBar.style.width = `${(boletin * 100) / total}%`;
+    validacionesIncBar.style.width = `${(validacionesInc * 100) / total}%`;
+    //desarrolloGerenciaBar.style.width = `${(desarrolloGerencia * 100) / reportesEnviados}%`;
+
     //desarrolloGerenciaBar.style.width = `${(desarrolloGerencia * 100) / reportesEnviados}%`;
 
     desarrolloAreaData.textContent = desarrolloArea;
@@ -173,8 +183,10 @@ const calculoReportesTipo = () => {
     gdpData.textContent = gdp;
     clasificacionData.textContent = clasificacion;
     tablasData.textContent = tablas;
-    carteraData.textContent = cartera; 
+    carteraData.textContent = cartera;
+    prioridadesAreaData.textContent = prioridadesArea; 
     boletinData.textContent = boletin;
+    validacionesIncData.textContent = validacionesInc;
     //desarrolloGerenciaData.textContent = desarrolloGerencia;
 }
 
