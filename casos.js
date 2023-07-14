@@ -10,7 +10,6 @@ let diasDesarrollo = 97;
 let diasCierre = 68;
 let casosNuevos = 4;
 let casosCerrados = 7;
-let pkeSoporteCliente = 0;
 let pkeIntegracionServicios = 23;
 let pkeInteraccionCliente = 13;
 let pkePlanesPromociones = 1;
@@ -44,7 +43,6 @@ let diasDesarrolloData = document.querySelector('.dias-desarrollo');
 let diasCierreData = document.querySelector('.dias-cierre');
 let casosNuevosData = document.querySelector('.nuevos');
 let casosCerradosData = document.querySelector('.cerrados');
-let soporteClienteBar = document.querySelector('.soporte-cliente');
 let integracionServiciosBar = document.querySelector('.integracion-servicios');
 let interaccionClienteBar = document.querySelector('.interaccion-cliente');
 let planesPromocionesBar = document.querySelector('.planes-promociones');
@@ -54,7 +52,6 @@ let soporteNegocioBar = document.querySelector('.soporte-negocio');
 let plataformasInfraestructuraBar = document.querySelector('.plataformas-infraestructura');
 let controlOperacionesBar = document.querySelector('.control-operaciones');
 let seguridadBar = document.querySelector('.seguridad');
-let soporteClienteSpan = document.querySelector('.soporte-cliente-data');
 let integracionServiciosSpan = document.querySelector('.integracion-servicios-data');
 let interaccionClienteSpan = document.querySelector('.interaccion-cliente-data');
 let planesPromocionesSpan = document.querySelector('.planes-promociones-data');
@@ -117,8 +114,7 @@ const calculoCasosNuevosCerrados = () => {
 }
 
 calculoPkeGerencia = () => {
-    let totalPke = pkeSoporteCliente + pkeIntegracionServicios + pkeInteraccionCliente + pkePlanesPromociones + pkePlataformasDatos + pkeSoporteOperacion + pkeSoporteNegocio + pkePlataformasInfraestructura + pkeControlOperaciones + pkeSeguridad;
-    soporteClienteBar.style.width = `${(pkeSoporteCliente * 100) / totalPke}%`;
+    let totalPke = pkeIntegracionServicios + pkeInteraccionCliente + pkePlanesPromociones + pkePlataformasDatos + pkeSoporteOperacion + pkeSoporteNegocio + pkePlataformasInfraestructura + pkeControlOperaciones + pkeSeguridad;
     integracionServiciosBar.style.width = `${(pkeIntegracionServicios * 100) / totalPke}%`;
     interaccionClienteBar.style.width = `${(pkeInteraccionCliente * 100) / totalPke}%`;
     planesPromocionesBar.style.width = `${(pkePlanesPromociones * 100) / totalPke}%`;
@@ -129,7 +125,6 @@ calculoPkeGerencia = () => {
     controlOperacionesBar.style.width = `${(pkeControlOperaciones * 100) / totalPke}%`;
     seguridadBar.style.width = `${(pkeSeguridad * 100) / totalPke}%`;
 
-    soporteClienteSpan.textContent = pkeSoporteCliente;
     integracionServiciosSpan.textContent = pkeIntegracionServicios;
     interaccionClienteSpan.textContent = pkeInteraccionCliente;
     planesPromocionesSpan.textContent = pkePlanesPromociones;
