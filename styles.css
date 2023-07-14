@@ -181,6 +181,7 @@ h1 {
     position: absolute;
     right: calc(50% - 37px);
     top: calc(50% - 19px);
+    color: white;
 }
 
 .reportes-enviados {
